@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/Button.dart';
-import 'package:flutterapp/TextAndStyle.dart';
 import 'package:flutterapp/WidgetStateManagement.dart';
 
-import 'ImageAndIcon.dart';
+import 'generalcontrol/Button.dart';
+import 'generalcontrol/EditTextAndFrom.dart';
+import 'generalcontrol/ImageAndIcon.dart';
+import 'generalcontrol/Progress.dart';
+import 'generalcontrol/TextAndStyle.dart';
+import 'layout/Align.dart';
+import 'layout/FlowLayout.dart';
+import 'layout/LinearLayout.dart';
+import 'layout/StackLayout.dart';
 
 class NewRoute extends StatelessWidget {
   @override
@@ -64,6 +70,66 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return ImageAndIconWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("输入框和from表单"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return EditTextAndFromWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("进度条"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ProgressWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("线性布局"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LinearLayoutWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("流式布局"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return FlowLayoutWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("层叠布局"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return StackLayoutWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("对齐与相对定位"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return AlignWidget();
                 }));
               },
             ),
