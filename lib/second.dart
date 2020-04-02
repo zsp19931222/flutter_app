@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/WidgetStateManagement.dart';
 
+import 'container/Container.dart';
+import 'container/DecoratedBox.dart';
+import 'container/Padding.dart';
+import 'container/ScaffoldRoute.dart';
+import 'container/SizeLimit.dart';
+import 'container/Transform.dart';
 import 'generalcontrol/Button.dart';
 import 'generalcontrol/EditTextAndFrom.dart';
 import 'generalcontrol/ImageAndIcon.dart';
@@ -18,7 +24,7 @@ class NewRoute extends StatelessWidget {
       appBar: AppBar(
         title: Text("New route"),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -95,7 +101,7 @@ class NewRoute extends StatelessWidget {
             ),
             FlatButton(
               child: Text("线性布局"),
-              textColor: Colors.lightGreen,
+              textColor: Colors.red,
               onPressed: () {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -115,7 +121,7 @@ class NewRoute extends StatelessWidget {
             ),
             FlatButton(
               child: Text("层叠布局"),
-              textColor: Colors.lightGreen,
+              textColor: Colors.blueGrey,
               onPressed: () {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -130,6 +136,66 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return AlignWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("填充"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return PaddingWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("尺寸限制类容器"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SizeLimitWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("装饰容器"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DecoratedBoxWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("变换"),
+              textColor: Colors.lightGreen,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return TransformWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("组合类容器"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ContainerWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("主页"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ScaffoldRoute();
                 }));
               },
             ),
