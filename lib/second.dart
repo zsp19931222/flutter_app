@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/WidgetStateManagement.dart';
+import 'package:flutterapp/scroll/CustomScrollViewWidget.dart';
+import 'package:flutterapp/scroll/GridViewWidget.dart';
+import 'package:flutterapp/scroll/ListViewWidget.dart';
+import 'package:flutterapp/scroll/ScrollControllerWidget.dart';
+import 'package:flutterapp/scroll/SingleChildScrollView.dart';
 
 import 'container/Container.dart';
 import 'container/DecoratedBox.dart';
@@ -196,6 +201,56 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return ScaffoldRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("可滚动组件"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SingleChildScrollViewWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("可滚动组件(ListView)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ListViewWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("可滚动组件(GridView)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return GridViewWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("可滚动组件(GridView+ListView)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CustomScrollViewWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("滑动监控"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ScrollControllerWidget();
                 }));
               },
             ),
