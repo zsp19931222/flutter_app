@@ -12,6 +12,9 @@ import 'container/Padding.dart';
 import 'container/ScaffoldRoute.dart';
 import 'container/SizeLimit.dart';
 import 'container/Transform.dart';
+import 'event/MyGestureDetector.dart';
+import 'event/NotificationWidget.dart';
+import 'event/PointerEventWidget.dart';
 import 'functionality/InheritedWidget.dart';
 import 'functionality/ThemeWidget.dart';
 import 'functionality/UpdateUIWiget.dart';
@@ -315,6 +318,106 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return StreamBuilderWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("原始指针事件处理"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return PointerEventWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(点击、双击、长按)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return GestureDetectorWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(拖动、滑动)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Drag();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(单一方向拖动)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DragVertical();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(缩放)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ScaleTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(GestureRecognizer)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return GestureRecognizerTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("手势识别(竞争)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return BothDirectionTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("Notification"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MyNotificationListener();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("Notification(自定义通知)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NotificationRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("Notification(阻止冒泡)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NotificationRoute1();
                 }));
               },
             ),
