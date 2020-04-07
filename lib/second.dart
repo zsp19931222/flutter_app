@@ -12,6 +12,10 @@ import 'container/Padding.dart';
 import 'container/ScaffoldRoute.dart';
 import 'container/SizeLimit.dart';
 import 'container/Transform.dart';
+import 'functionality/InheritedWidget.dart';
+import 'functionality/ThemeWidget.dart';
+import 'functionality/UpdateUIWiget.dart';
+import 'functionality/WillPopScopeWidget.dart';
 import 'generalcontrol/Button.dart';
 import 'generalcontrol/EditTextAndFrom.dart';
 import 'generalcontrol/ImageAndIcon.dart';
@@ -251,6 +255,66 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return ScrollControllerWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("返回拦截"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return WillPopScopeWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("数据共享"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MyInheritedWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("颜色和主题"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ThemeWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("路由换肤功能"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ThemeTestRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("异步更新UI(FutureBuilder)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return UpdateUIWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("异步更新UI(StreamBuilder)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return StreamBuilderWidget();
                 }));
               },
             ),
