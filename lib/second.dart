@@ -6,6 +6,9 @@ import 'package:flutterapp/scroll/ListViewWidget.dart';
 import 'package:flutterapp/scroll/ScrollControllerWidget.dart';
 import 'package:flutterapp/scroll/SingleChildScrollView.dart';
 
+import 'anime/AnimatedSwitcherRoute.dart';
+import 'anime/AnimationRoute.dart';
+import 'anime/HeroRoute.dart';
 import 'container/Container.dart';
 import 'container/DecoratedBox.dart';
 import 'container/Padding.dart';
@@ -418,6 +421,46 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return NotificationRoute1();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("动画"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return AnimationRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("动画(HERO)"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HeroAnimationRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("交织动画"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return StaggerRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("通用“动画切换”组件"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return AnimatedSwitcherRoute();
                 }));
               },
             ),
