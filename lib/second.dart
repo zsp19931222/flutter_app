@@ -15,6 +15,8 @@ import 'container/Padding.dart';
 import 'container/ScaffoldRoute.dart';
 import 'container/SizeLimit.dart';
 import 'container/Transform.dart';
+import 'customwidget/CustomPaintWidget.dart';
+import 'customwidget/CustomWidget.dart';
 import 'event/MyGestureDetector.dart';
 import 'event/NotificationWidget.dart';
 import 'event/PointerEventWidget.dart';
@@ -461,6 +463,26 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return AnimatedSwitcherRoute();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("自定义渐变按钮"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CustomWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("画笔画布"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CustomPaintWidget();
                 }));
               },
             ),
