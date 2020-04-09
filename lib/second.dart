@@ -20,6 +20,7 @@ import 'customwidget/CustomWidget.dart';
 import 'event/MyGestureDetector.dart';
 import 'event/NotificationWidget.dart';
 import 'event/PointerEventWidget.dart';
+import 'file_network/FileOperationRoute.dart';
 import 'functionality/InheritedWidget.dart';
 import 'functionality/ThemeWidget.dart';
 import 'functionality/UpdateUIWiget.dart';
@@ -483,6 +484,16 @@ class NewRoute extends StatelessWidget {
                 //导航到新路由
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return CustomPaintWidget();
+                }));
+              },
+            ),
+            FlatButton(
+              child: Text("使用文件来保存数据"),
+              textColor: Colors.blueGrey,
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return FileOperationRoute();
                 }));
               },
             ),
